@@ -17,4 +17,4 @@ Sybline's Dead Letter Queues work slightly different to other systems. Dead Lett
 * Queues are not coupled
   * If I delete `A`, queue `A-dlq` is not deleted
   * You can treat it as a distinct non-DLQ queue
-    * To mainly put on DLQ you push the data to the DLQ and then  Ack on the non-DLQ queue
+    * To manually put on DLQ you push the data to the DLQ and then  Ack on the non-DLQ queue
