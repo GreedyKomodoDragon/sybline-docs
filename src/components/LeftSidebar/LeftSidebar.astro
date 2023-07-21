@@ -1,5 +1,5 @@
 ---
-import { getLanguageFromURL } from "../../languages";
+import { getLanguageFromURL, getVersionFromURL } from "../../languages";
 import { SIDEBAR } from "../../consts";
 
 type Props = {
@@ -11,7 +11,8 @@ const currentPageMatch = currentPage.endsWith("/")
   ? currentPage.slice(1, -1)
   : currentPage.slice(1);
 const langCode = getLanguageFromURL(currentPage);
-const sidebar = SIDEBAR[langCode];
+const version = getVersionFromURL(currentPage);
+const sidebar = SIDEBAR[langCode][version];
 ---
 
 <nav aria-labelledby="grid-left">

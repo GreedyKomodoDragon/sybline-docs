@@ -1,5 +1,5 @@
 ---
-import { getLanguageFromURL } from "../../languages";
+import { convertVersionString, getLanguageFromURL, getVersionFromURL } from "../../languages";
 import SyblineLogo from "./SyblineLogo.astro";
 import SkipToContent from "./SkipToContent.astro";
 import SidebarToggle from "./SidebarToggle";
@@ -13,6 +13,7 @@ type Props = {
 
 const { currentPage } = Astro.props;
 const lang = getLanguageFromURL(currentPage);
+const version = getVersionFromURL(currentPage);
 
 ---
 
@@ -36,13 +37,13 @@ const lang = getLanguageFromURL(currentPage);
       currentPage != "/" && (
         <>
           <LanguageSelect lang={lang} client:idle />
-          <VersionSelect version={"0.1.0"} client:idle />
+          <VersionSelect version={convertVersionString(version)} client:idle />
         </>
       )
     }
 	{
 		currentPage == "/" && (
-		  <h3 class="docs"><a class="anchor" href="/en/about/introduction">Docs</a></h3>
+		  <h3 class="docs"><a class="anchor" href="/en/v020/about/introduction">Docs</a></h3>
 		)
 	  }
     <div class="search-item">
