@@ -62,6 +62,7 @@ export const SIDEBAR: Sidebar = {
       "About Sybline": [
         { text: "Introduction", link: "en/v020/about/introduction" },
         { text: "FIFO Queues", link: "en/v020/about/fifo" },
+		{ text: "Dead Letter Queues", link: "en/v020/about/deadletterqueue" },
         { text: "Routing", link: "en/v020/about/routing" },
         { text: "Snapshotting", link: "en/v020/about/snapshotting" },
         { text: "Authentication", link: "en/v020/about/authentication" },

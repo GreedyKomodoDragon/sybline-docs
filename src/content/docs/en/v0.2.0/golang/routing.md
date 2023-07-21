@@ -14,15 +14,19 @@ Below is an example of how to send a message to two queues:
 amount := uint32(20)
 queueOneName := "queue_one"
 routingKey := "route"
+amount := uint32(10)
+queueName := "randomOne"
+retryThreshold := uint32(3)
+hasDLQ := true
 
-// Create first queue with "route" routing key
-if err := client.CreateQueue(ctx, routingKey, queueOneName, amount); err != nil {
-    log.Fatal("error:", err)
+if err := client.CreateQueue(ctx, route, queueName, amount, retryThreshold, hasDLQ); err != nil {
+    log.Fatal("error queue:", err)
 }
+
 
 // Create second queue with "route" routing key
 queueTwoName := "queue_two"
-if err := client.CreateQueue(ctx, routingKey, queueName, amount); err != nil {
+if err := client.CreateQueue(ctx, routingKey, queueName, amount, retryThreshold, hasDLQ); err != nil {
     log.Fatal("error:", err)
 }
 ```
@@ -36,9 +40,11 @@ With the Go client you can also add routing keys to exising queues, e.g. multipl
 amount := uint32(20)
 queueName := "queue_one"
 firstRoutingKey := "route"
+retryThreshold := uint32(3)
+hasDLQ := true
 
 // Create first queue with "route" routing key
-if err := client.CreateQueue(ctx, firstRoutingKey, queueName, amount); err != nil {
+if err := client.CreateQueue(ctx, firstRoutingKey, queueName, amount, retryThreshold, hasDLQ); err != nil {
     log.Fatal("error:", err)
 }
 
@@ -60,9 +66,11 @@ Below is an example of how to delete a routing key from a queue and an example o
 amount := uint32(20)
 queueName := "queue_one"
 firstRoutingKey := "route"
+retryThreshold := uint32(3)
+hasDLQ := true
 
 // Create first queue with "route" routing key
-if err := client.CreateQueue(ctx, firstRoutingKey, queueName, amount); err != nil {
+if err := client.CreateQueue(ctx, firstRoutingKey, queueName, amount, retryThreshold, hasDLQ); err != nil {
     log.Fatal("error:", err)
 }
 

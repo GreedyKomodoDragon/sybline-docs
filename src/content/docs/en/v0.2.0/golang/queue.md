@@ -12,12 +12,15 @@ Sybline works by on creation of a queue you have to prvide the routing key with 
 Queue creation using the client uses the following code:
 ```go
 // Queue creation starts here
-amount := uint32(20)
-queueName := "queue"
-routingKey := "route"
-if err := client.CreateQueue(ctx, routingKey, queueName, amount); err != nil {
+amount := uint32(10)
+queueName := "randomOne"
+route := "random"
+retryThreshold := uint32(3)
+hasDLQ := true
+if err := client.CreateQueue(ctx, route, queueName, amount, retryThreshold, hasDLQ); err != nil {
     log.Fatal("error queue:", err)
 }
+
 ```
 
 ### Size Parameter
@@ -47,10 +50,12 @@ if err := client.Login(ctx, "sybline") ; err != nil {
 
 
 // Queue creation starts here
-amount := uint32(20)
-queueName := "queue"
-routingKey := "route"
-if err := client.CreateQueue(ctx, routingKey, queueName, amount); err != nil {
+amount := uint32(10)
+queueName := "randomOne"
+route := "random"
+retryThreshold := uint32(3)
+hasDLQ := true
+if err := client.CreateQueue(ctx, route, queueName, amount, retryThreshold, hasDLQ); err != nil {
     log.Fatal("error queue:", err)
 }
 ```

@@ -30,7 +30,10 @@ if err := client.Login(ctx, "sybline"); err != nil {
 
 amount := uint32(10)
 queueName := "randomOne"
-if err := client.CreateQueue(ctx, "random", queueName, amount); err != nil {
+retryThreshold := uint32(3)
+queueName := "randomOne"
+hasDLQ := true
+if err := client.CreateQueue(ctx, "random", queueName, amount, retryThreshold, hasDLQ); err != nil {
     log.Fatal("error queue:", err)
 }
 
@@ -71,10 +74,11 @@ if err := client.Login(ctx, "sybline"); err != nil {
 amount := uint32(10)
 queueName := "randomOne"
 route := "random"
-if err := client.CreateQueue(ctx, route, queueName, amount); err != nil {
+retryThreshold := uint32(3)
+hasDLQ := true
+if err := client.CreateQueue(ctx, route, queueName, amount, retryThreshold, hasDLQ); err != nil {
     log.Fatal("error queue:", err)
 }
-
 
 messages := []handler.Message{
     {
