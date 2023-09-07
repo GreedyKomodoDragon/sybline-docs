@@ -19,7 +19,7 @@ You will need the following tools:
 
 ### Setting up the Docker Cluster
 
-Either copy the below file, or clone the [Sybline Repo](https://gitlab.com/Sybline/SyblineMQ) and then within the repo's directory, look within the `docker-compose.yml` file, should look like the following:
+Either copy the below file, or clone the [Sybline Repo](https://github.com/GreedyKomodoDragon/Sybline) and then within the repo's directory, look within the `docker-compose.yml` file, should look like the following:
 
 ```yml
 version: '3.1'

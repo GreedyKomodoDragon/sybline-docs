@@ -35,4 +35,4 @@ There is currently no road map for these to be supported in v0.1.0.
 
 We're more than happy for commmunity support in this project! Currently we have no offical channels of communication, these will be coming soon!
 
-Head over to our <a href="https://gitlab.com/Sybline">Gitlab organisation</a> and have a look!
+Head over to our <a href="https://github.com/GreedyKomodoDragon/Sybline">Github space</a> and have a look!
