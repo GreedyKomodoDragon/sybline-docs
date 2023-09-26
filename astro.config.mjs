@@ -12,5 +12,9 @@ export default defineConfig({
   react()],
   site: `https://www.sybline.com`,
   output: 'static',
-  adapter: vercelStatic(),
+  adapter: vercelStatic({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
