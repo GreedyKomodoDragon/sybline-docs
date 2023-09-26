@@ -23,7 +23,9 @@ HEARTBEAT_TIMEOUT | 2 | Number of seconds that each instance of the cluster is c
 RAFT_NODE_ID | | Required to be set. This is the id of the node for the raft algorithm
 NODES |  | This is list of all the node id in a comma separated list of all the node ids of the other nodes from the configuration `RAFT_NODE_ID` e.g. 2,3 if current node is named 1 with two other nodes named 2 & 3
 ADDRESSES | | A list of the other nodes within the cluster e.g. node_2:1111,node_3:1111
-
+STREAM_BUILD_TIMEOUT | 2 | How long to wait to build a stream between nodes before timing out
+STREAM_BUILD_ATTEMPTS | 3 | How many attempts to try build a stream betwen nodes before stopping
+APPEND_TIMEOUT | 3 | How long to wait for the nodes to return a result on the append stream before timing out
 ### Snapshots
 
 Name | Default Value | Description
