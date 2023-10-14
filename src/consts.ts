@@ -23,9 +23,9 @@ export const COMMUNITY_INVITE_URL = ``;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-  indexName: process.env.ALGORIA_INDEX_NAME,
-  appId: process.env.ALGORIA_ID,
-  apiKey: process.env.ALGORIA_API,
+  indexName: import.meta.env.ALGORIA_INDEX_NAME,
+  appId: import.meta.env.ALGORIA_ID,
+  apiKey: import.meta.env.ALGORIA_API,
 };
 
 export type Sidebar = Record<
