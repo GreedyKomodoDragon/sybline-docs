@@ -6,12 +6,10 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
   image: {
-    src: "https://github.com/withastro/astro/blob/main/.github/assets/banner.png?raw=true",
+    src: "https://github.com/GreedyKomodoDragon/Sybline/blob/main/images/logo_full.svg",
     alt:
-      "astro logo on a starry expanse of space," +
-      " with a purple saturn-like planet floating in the right foreground",
+      "Sybline logo",
   },
-  twitter: "astrodotbuild",
 };
 
 export const KNOWN_LANGUAGES = {
@@ -25,9 +23,9 @@ export const COMMUNITY_INVITE_URL = ``;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-  indexName: "XXXXXXXXXX",
-  appId: "XXXXXXXXXX",
-  apiKey: "XXXXXXXXXX",
+  indexName: process.env.ALGORIA_INDEX_NAME,
+  appId: process.env.ALGORIA_ID,
+  apiKey: process.env.ALGORIA_API,
 };
 
 export type Sidebar = Record<
@@ -104,7 +102,31 @@ export const SIDEBAR: Sidebar = {
         { text: "Consuming", link: "en/v030/golang/consuming" },
       ],
     },
+    v031: {
+      "About Sybline": [
+        { text: "Introduction", link: "en/v031/about/introduction" },
+        { text: "FIFO Queues", link: "en/v031/about/fifo" },
+		{ text: "Dead Letter Queues", link: "en/v031/about/deadletterqueue" },
+        { text: "Routing", link: "en/v031/about/routing" },
+        { text: "Snapshotting", link: "en/v031/about/snapshotting" },
+        { text: "Authentication", link: "en/v031/about/authentication" },
+      ],
+      "Cluster Setup": [
+        { text: "Overview", link: "en/v031/cluster/options" },
+        { text: "Configuration", link: "en/v031/cluster/configurations" },
+        { text: "Docker", link: "en/v031/cluster/docker" },
+      ],
+      "Go Client": [
+        { text: "Getting Started", link: "en/v031/golang/install" },
+        { text: "Authentication", link: "en/v031/golang/auth" },
+        { text: "Queue Creation", link: "en/v031/golang/queue" },
+        { text: "Routing", link: "en/v031/golang/routing" },
+        { text: "Publishing", link: "en/v031/golang/publisher" },
+        { text: "Consuming", link: "en/v031/golang/consuming" },
+        { text: "mTLS", link: "en/v031/golang/mtls" },
+      ],
+    },
   },
 };
 
-export const KNOWN_VERSIONS = ["v0.3.0", "v0.2.0", "v0.1.0"];
+export const KNOWN_VERSIONS = ["v0.3.1", "v0.3.0", "v0.2.0", "v0.1.0"];
