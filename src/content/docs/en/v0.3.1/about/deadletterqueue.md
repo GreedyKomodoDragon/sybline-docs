@@ -3,7 +3,7 @@ title: "Dead Letter Queues"
 description: "Explaining how Dead Letter Queues work"
 ---
 
-As of v0.3.0, Sybline allows for Dead Letter Queues (DLQs). 
+As of v0.3.1, Sybline allows for Dead Letter Queues (DLQs). 
 
 Dead Letter Queues are a way of moving failing messages/unprocessable messages to another queue to be handled in another manner. If you are interested in learning more about Dead Letter Queues, more information can be found at [Wikipedia](https://en.wikipedia.org/wiki/Dead_letter_queue). 
 
