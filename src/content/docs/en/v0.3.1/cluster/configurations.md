@@ -3,7 +3,7 @@ title: "Configurations"
 description: "List of All possible configurations"
 ---
 
-v0.2.0 to v0.3.0 greatly simplifes the number of configurations required.
+v0.2.0 to v0.3.1 greatly simplifes the number of configurations required.
 
 Here is all the possible configurations for a Sybline Cluster. Any configurations that do not have a default value will require you to set a value, or the cluster will fail to launch.
 

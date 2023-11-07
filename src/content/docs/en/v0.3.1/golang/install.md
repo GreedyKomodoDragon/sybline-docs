@@ -12,11 +12,11 @@ go get github.com/GreedyKomodoDragon/sybline-go/handler
 
 Once you have installed the package, we recommend you follow the documentation in the following order:
 
-1. [Authentication](/en/v030/golang/auth)
-2. [Queues](/en/v030/golang/queue)
-3. [Routing](/en/v030/golang/routing)
-4. [Publisher](/en/v030/golang/publisher)
-5. [Consumer](/en/v030/golang/consuming)
+1. [Authentication](/en/v031/golang/auth)
+2. [Queues](/en/v031/golang/queue)
+3. [Routing](/en/v031/golang/routing)
+4. [Publisher](/en/v031/golang/publisher)
+5. [Consumer](/en/v031/golang/consuming)
 
 ### Module Set up
 

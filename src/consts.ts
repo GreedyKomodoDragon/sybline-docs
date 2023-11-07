@@ -79,29 +79,6 @@ export const SIDEBAR: Sidebar = {
         { text: "Consuming", link: "en/v020/golang/consuming" },
       ],
     },
-    v030: {
-      "About Sybline": [
-        { text: "Introduction", link: "en/v030/about/introduction" },
-        { text: "FIFO Queues", link: "en/v030/about/fifo" },
-		{ text: "Dead Letter Queues", link: "en/v030/about/deadletterqueue" },
-        { text: "Routing", link: "en/v030/about/routing" },
-        { text: "Snapshotting", link: "en/v030/about/snapshotting" },
-        { text: "Authentication", link: "en/v030/about/authentication" },
-      ],
-      "Cluster Setup": [
-        { text: "Overview", link: "en/v030/cluster/options" },
-        { text: "Configuration", link: "en/v030/cluster/configurations" },
-        { text: "Docker", link: "en/v030/cluster/docker" },
-      ],
-      "Go Client": [
-        { text: "Getting Started", link: "en/v030/golang/install" },
-        { text: "Authentication", link: "en/v030/golang/auth" },
-        { text: "Queue Creation", link: "en/v030/golang/queue" },
-        { text: "Routing", link: "en/v030/golang/routing" },
-        { text: "Publishing", link: "en/v030/golang/publisher" },
-        { text: "Consuming", link: "en/v030/golang/consuming" },
-      ],
-    },
     v031: {
       "About Sybline": [
         { text: "Introduction", link: "en/v031/about/introduction" },
@@ -129,4 +106,4 @@ export const SIDEBAR: Sidebar = {
   },
 };
 
-export const KNOWN_VERSIONS = ["v0.3.1", "v0.3.0", "v0.2.0", "v0.1.0"];
+export const KNOWN_VERSIONS = ["v0.3.1", "v0.2.0", "v0.1.0"];
