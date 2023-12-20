@@ -103,7 +103,32 @@ export const SIDEBAR: Sidebar = {
         { text: "mTLS", link: "en/v031/golang/mtls" },
       ],
     },
+    v040: {
+      "About Sybline": [
+        { text: "Introduction", link: "en/v040/about/introduction" },
+        { text: "FIFO Queues", link: "en/v040/about/fifo" },
+		{ text: "Dead Letter Queues", link: "en/v040/about/deadletterqueue" },
+        { text: "Routing", link: "en/v040/about/routing" },
+        { text: "Snapshotting", link: "en/v040/about/snapshotting" },
+        { text: "Authentication", link: "en/v040/about/authentication" },
+        { text: "Authorisation (RBAC)", link: "en/v040/about/rbac" },
+      ],
+      "Cluster Setup": [
+        { text: "Overview", link: "en/v040/cluster/options" },
+        { text: "Configuration", link: "en/v040/cluster/configurations" },
+        { text: "Docker", link: "en/v040/cluster/docker" },
+      ],
+      "Go Client": [
+        { text: "Getting Started", link: "en/v040/golang/install" },
+        { text: "Authentication", link: "en/v040/golang/auth" },
+        { text: "Queue Creation", link: "en/v040/golang/queue" },
+        { text: "Routing", link: "en/v040/golang/routing" },
+        { text: "Publishing", link: "en/v040/golang/publisher" },
+        { text: "Consuming", link: "en/v040/golang/consuming" },
+        { text: "mTLS", link: "en/v040/golang/mtls" },
+      ],
+    },
   },
 };
 
-export const KNOWN_VERSIONS = ["v0.3.1", "v0.2.0", "v0.1.0"];
+export const KNOWN_VERSIONS = ["v0.4.0", "v0.3.1", "v0.2.0", "v0.1.0"];
