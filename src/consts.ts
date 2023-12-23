@@ -126,6 +126,7 @@ export const SIDEBAR: Sidebar = {
         { text: "Publishing", link: "en/v040/golang/publisher" },
         { text: "Consuming", link: "en/v040/golang/consuming" },
         { text: "mTLS", link: "en/v040/golang/mtls" },
+        { text: "RBAC", link: "en/v040/golang/rbac" },
       ],
     },
   },
