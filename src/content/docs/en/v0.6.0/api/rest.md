@@ -12,7 +12,7 @@ Below is list of API by section, with the following information:
 
 ## Information API
 
-### api/v1/info/routing
+#### api/v1/info/routing
 
 Method: GET
 
@@ -31,7 +31,7 @@ Response Type:
 }
 ```
 
-### api/v1/info/routing/:routingKey
+#### api/v1/info/routing/:routingKey
 
 Method: GET
 
@@ -54,7 +54,7 @@ Response Type:
 }
 ```
 
-### api/v1/info/queues
+#### api/v1/info/queues
 
 Method: GET
 
@@ -73,7 +73,7 @@ Response Type:
 }
 ```
 
-### api/v1/info/all
+#### api/v1/info/all
 
 Method: GET
 
@@ -95,7 +95,7 @@ Response Type:
 }
 ```
 
-### api/v1/info/accounts
+#### api/v1/info/accounts
 
 Method: GET
 
@@ -114,7 +114,7 @@ Response Type:
 }
 ```
 
-### api/v1/info/roles
+#### api/v1/info/roles
 
 Method: GET
 
@@ -143,7 +143,7 @@ Response Type:
 ```
 
 
-### api/v1/info/accounts/roles/:username 
+#### api/v1/info/accounts/roles/:username 
 
 Method: GET
 
@@ -175,7 +175,7 @@ Response Type:
 }
 ```
 
-### api/v1/info/isLeader
+#### api/v1/info/isLeader
 
 Method: GET
 
@@ -193,32 +193,245 @@ Response Type:
 
 ## Queue API
 
-### api/v1/queue/isLeader
+#### api/v1/queue/create
 
-### api/v1/queue/fetch
+Method: POST
 
-### api/v1/queue/ack
+Request Body Type:
+```js
+{
+  "properties": {
+    "routingKey": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "size": {
+      "type": "number/uint32"
+    },
+    "retryLimit": {
+      "type": "number/uint32"
+    },
+    "hasDLQueue": {
+      "type": "boolean"
+    },
+  }
+}
+```
 
-### api/v1/queue/nack
+Response Type:
+
+```js
+{
+  "properties": {
+    "isLeader": {
+      "type": "boolean"
+    }
+  }
+}
+```
+
+#### api/v1/queue/fetch?amount=[number]&queue=[string]
+
+Method: GET
+
+Response Type:
+
+```js
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "data": {
+      "type": "[]byte"
+    }
+  }
+}
+```
+
+#### api/v1/queue/ack
+
+Method: PUT
+
+Request Body Type:
+
+```js
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "queue": {
+      "type": "string"
+    }
+  }
+}
+```
+
+Response Code: 202
+
+#### api/v1/queue/nack
+
+Method: PUT
+
+Request Body Type:
+
+```js
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "queue": {
+      "type": "string"
+    }
+  }
+}
+```
+
+Response Code: 202
 
 ## Broker API
 
-### api/v1/broker/submit
+#### api/v1/broker/submit
+
+Method: POST
+
+Request Body Type:
+```js
+{
+  "properties": {
+    "routingKey": {
+      "type": "string"
+    },
+    "data": {
+      "type": "string"
+    }
+  }
+}
+```
+
+Response Code: 202
 
 ## Accounts API
 
-### api/v1/broker
+#### api/v1/accounts
 
-### api/v1/broker/roles/create
+Method: POST
 
-### api/v1/broker/roles/:username/:role
+Request Body Type:
+```js
+{
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}
+```
 
-### api/v1/broker/roles/:username/:role
+Response Code: 201
+
+#### api/v1/accounts/roles/create
+
+Method: POST
+
+Request Body Type:
+```js
+{
+  "properties": {
+    "role": {
+      "type": "string"
+    }
+  }
+}
+```
+
+Response Code: 201
+
+#### api/v1/accounts/roles/:username/:role
+
+Method: PUT
+
+Path Parameters:
+
+* :username - string
+* :role - string
+
+Request Body Type:
+```js
+{
+  "properties": {
+    "role": {
+      "type": "string"
+    }
+  }
+}
+```
+
+Response Code: 201
+
+#### api/v1/accounts/roles/:username/:role
+
+Method: DELETE
+
+Path Parameters:
+
+* :username - string
+* :role - string
+
+Request Body Type:
+```js
+{
+  "properties": {
+    "role": {
+      "type": "string"
+    }
+  }
+}
+```
+
+Response Code: 202
 
 ## Login API
 
-### api/v1/login
+#### api/v1/login
 
-### api/v1/login
+Method: GET
 
-### api/v1/logout
+Basic Auth: TBD
+
+Response Code: 200
+
+#### api/v1/login
+
+Method: GET
+
+Request Body Type:
+```js
+{
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}
+```
+
+Response Code: 200
+
+#### api/v1/logout
+
+Method: GET
+
+Basic Auth: TBD
+
+Response Code: 202

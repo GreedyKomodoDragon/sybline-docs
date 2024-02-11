@@ -1,5 +1,9 @@
 ---
-import { convertVersionString, getLanguageFromURL, getVersionFromURL } from "../../languages";
+import {
+  convertVersionString,
+  getLanguageFromURL,
+  getVersionFromURL,
+} from "../../languages";
 import SyblineLogo from "./SyblineLogo.astro";
 import SkipToContent from "./SkipToContent.astro";
 import SidebarToggle from "./SidebarToggle";
@@ -14,7 +18,6 @@ type Props = {
 const { currentPage } = Astro.props;
 const lang = getLanguageFromURL(currentPage);
 const version = getVersionFromURL(currentPage);
-
 ---
 
 <header>
@@ -41,11 +44,15 @@ const version = getVersionFromURL(currentPage);
         </>
       )
     }
-	{
-		currentPage == "/" && (
-		  <h3 class="docs"><a class="anchor" href="/en/v040/about/introduction">Docs</a></h3>
-		)
-	  }
+    {
+      currentPage == "/" && (
+        <h3 class="docs">
+          <a class="anchor" href="/en/v060/about/introduction">
+            Docs
+          </a>
+        </h3>
+      )
+    }
     <div class="search-item">
       <Search client:idle />
     </div>
@@ -162,16 +169,16 @@ const version = getVersionFromURL(currentPage);
   }
 
   .anchor {
-	text-decoration: none;
-	cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
   }
   .anchor:hover {
-	text-decoration: none;
-	cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .docs {
-	margin-top: 0.5em !important;
+    margin-top: 0.5em !important;
   }
 </style>
 
