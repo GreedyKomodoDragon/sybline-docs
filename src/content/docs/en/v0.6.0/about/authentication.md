@@ -19,4 +19,3 @@ Without Redis it still has the following features:
 Username-Password is the only way that a client is able to authenticate itself to the cluster.
 
 The client is returned a token on a successful login. The client must send its username and that token everytime it wants to perform an action that requires authentication.
-
