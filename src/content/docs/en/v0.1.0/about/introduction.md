@@ -30,7 +30,6 @@ We plan to offically support:
 * Python
 * Rust
 
-There is currently no road map for these to be supported in v0.1.0.
 ## Want to Get involved?
 
 We're more than happy for commmunity support in this project! Currently we have no offical channels of communication, these will be coming soon!

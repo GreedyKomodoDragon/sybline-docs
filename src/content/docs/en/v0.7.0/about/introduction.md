@@ -17,6 +17,8 @@ Our features:
 
 Sybline is very much in the Alpha Development stage, while we aim to avoid any API changes, we cannot 100% ensure that breaking changes will be introduced while Sybline is being developed.
 
+Use in production at own risk, while the API and roadmap is unclear, there is no testing framework in place so both the Sybline code and the custom Raft library is likely to contain bugs. 
+
 ## Getting Started
 
 Head to our <a href="/en/page-2">Cluster Setup</a> pages to get started using Sybline in your projects. 

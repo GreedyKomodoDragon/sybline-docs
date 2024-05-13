@@ -160,7 +160,39 @@ export const SIDEBAR: Sidebar = {
         { text: "RBAC", link: "en/v060/golang/rbac" },
       ],
     },
+    v070: {
+      "About Sybline": [
+        { text: "Introduction", link: "en/v070/about/introduction" },
+        { text: "FIFO Queues", link: "en/v070/about/fifo" },
+		    { text: "Dead Letter Queues", link: "en/v070/about/deadletterqueue" },
+        { text: "Routing", link: "en/v070/about/routing" },
+        { text: "Snapshotting", link: "en/v070/about/snapshotting" },
+        { text: "Authentication", link: "en/v070/about/authentication" },
+        { text: "Authorisation (RBAC)", link: "en/v070/about/rbac" },
+        { text: "Performance", link: "en/v070/about/performance" },
+      ],
+      "Cluster Setup": [
+        { text: "Overview", link: "en/v070/cluster/options" },
+        { text: "Configuration", link: "en/v070/cluster/configurations" },
+        { text: "Docker", link: "en/v070/cluster/docker" },
+        { text: "Kubernetes", link: "en/v070/cluster/kubernetes" },
+      ],
+      "API": [
+        { text: "REST", link: "en/v070/api/rest" },
+        { text: "gRPC", link: "en/v070/api/grpc" },
+      ],
+      "Go Client": [
+        { text: "Getting Started", link: "en/v070/golang/install" },
+        { text: "Authentication", link: "en/v070/golang/auth" },
+        { text: "Queue Creation", link: "en/v070/golang/queue" },
+        { text: "Routing", link: "en/v070/golang/routing" },
+        { text: "Publishing", link: "en/v070/golang/publisher" },
+        { text: "Consuming", link: "en/v070/golang/consuming" },
+        { text: "mTLS", link: "en/v070/golang/mtls" },
+        { text: "RBAC", link: "en/v070/golang/rbac" },
+      ],
+    },
   },
 };
 
-export const KNOWN_VERSIONS = ["v0.6.0", "v0.4.0", "v0.3.1", "v0.2.0", "v0.1.0"];
+export const KNOWN_VERSIONS = ["v0.7.0", "v0.6.0", "v0.4.0", "v0.3.1", "v0.2.0", "v0.1.0"];
