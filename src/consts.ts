@@ -1,6 +1,6 @@
 export const SITE = {
   title: "Sybline Docs",
-  description: "Your website description.",
+  description: "Elevate your distributed system's communication with Sybline, a Go-based message broker designed for simplicity. Empower your architecture with effortless data exchange to manage your ever growing micro-service architecture.",
   defaultLanguage: "en-us",
 } as const;
 
