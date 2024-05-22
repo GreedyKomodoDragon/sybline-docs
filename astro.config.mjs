@@ -18,4 +18,20 @@ export default defineConfig({
   adapter: vercelStatic({
     analytics: true,
   }),
+  server: {
+    middleware: {
+        // Example middleware to block a certain user agent
+        async apply(server) {
+            server.use((req, res, next) => {
+                const userAgent = req.headers['user-agent'];
+                const blockedUserAgent = 'Bytespider';
+
+                if (userAgent.includes(blockedUserAgent)) {
+                    return res.status(403).send('Forbidden');
+                }
+                next();
+            });
+        },
+    },
+},
 });
